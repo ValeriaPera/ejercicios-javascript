@@ -18,6 +18,7 @@ Main
 - `SearchResults` debe tener una lista de componentes `PokemonCard`
 - `SearchResults` se muestra como una grilla de cards
 - `PokemonCard` debe mostrar el número, el nombre, la imagen, y los tipos
+- Utilizar 3 contextos, uno para el lenguaje, otro para los datos, y otro para la visualización.
 
 ### Filtrado
 
@@ -27,18 +28,19 @@ Main
 - Generar la lista de filtros dinámicamente a partir de los datos
 - Al chequear un filtro de un tipo, debería actualizarse los pókemons mostrados con aquellos que posean dicho tipo
 - Pueden filtrarse varios tipos a la vez, por ejemplo, "Grass" y "Poison". Solo se deben mostrar los pokémons que tengan todos los tipos seleccionados.
+- `ResultOptions` también debe tener un select con dos opciones: "Ordenar por número", "Ordenar por nombre". El valor por defecto debería ser "Ordenar por número". Si se cambia la opción en el select, se debe actualizar la lista mostrada, ordenándola respectivamente (en ambos casos de menor a mayor). En caso de que haya filtros activos, se deben mantener, es decir, si hay 3 pokemons mostrados porque hay filtros seleccionados, hay que ordenar esos 3 solamente.
 
 ### Visualización
 
 - `ResultOptions` debe tener un botón que diga "Mostrar 3" y un botón que diga "Mostrar 4"
 - Si se clickea "Mostrar 3", se deben mostrar 3 pókemons por fila, si se clickea "Mostrar 4" se deben mostrar 4
-- `SearchOptions` también debe tener un select con dos opciones: "Ordenar por número", "Ordenar por nombre". El valor por defecto debería ser "Ordenar por número". Si se cambia la opción en el select, se debe actualizar la lista mostrada, ordenándola respectivamente (en ambos casos de menor a mayor). En caso de que haya filtros activos, se deben mantener, es decir, si hay 3 pokemons mostrados porque hay filtros seleccionados, hay que ordenar esos 3 solamente.
 
 ### Lenguaje
 
 - `LanguageSelector` debe tener un select con dos opciones: "Español" e "Inglés". El valor inicial es español.
 - `Filters` debe contener también un título que diga "Filtros", `SearchResults` debe contener también un título que diga "Resultados" y "ResultOptions" debe contener un título que diga "Opciones"
 - Si se selecciona un nuevo lenguaje, se debe cambiar el texto de los títulos para reflejar el cambio. Usar un enum y no un booleano (por si se desean agregar más lenguajes).
+
 
 
 ## Datos
